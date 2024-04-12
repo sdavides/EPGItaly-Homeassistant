@@ -21,9 +21,13 @@ Goal: EPG TV Italy on HomeAssistant
 
  ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/48a1d44f-cb12-4ed5-a65f-70a8fb7d73ab)
 
-Example:
+## TIPS ##
+
+* Live streaming on Android ( mediaset and others available 13/04/2024 )
+
+## Example ##
  
- Alert
+ ## Alert ##
 
 ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/8eb2a6fe-abc3-40db-a90c-c8ecba3bb7f8)
 
