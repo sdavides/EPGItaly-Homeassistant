@@ -1,0 +1,797 @@
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: |2
+                 <center>Ultimo Aggiornamento:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') }}</center>
+                 
+                 **Ora in TV**  
+
+               ---
+                 
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'duration') }} min.)
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'cover') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'duration') }} min.)  
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'cover') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'duration') }} min.)  
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'cover') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'duration') }} min.)  
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'cover') }}"/>
+                    
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'duration') }} min.)  
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'cover') }}"/>
+                    
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'duration') }} min.)  
+                 
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'logo') }}"/>
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'title') }}**
+                {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'duration') }} min.)  
+                
+                [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'description')| replace ('None','' )}} 
+                 
+                ---
+                A seguire:
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nexttitle') }}** 
+                {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nextduration') }} min.)
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nextcover') }}"/>
+                {{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black; 
+          - type: markdown
+            content: |2-
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'logo') }}"/>
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'title') }}**
+                {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'duration') }} min.)  
+                  
+                [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'description')| replace ('None','' )}} 
+                 
+                ---
+                A seguire:
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nexttitle') }}** 
+                {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nextduration') }} min.)
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nextcover') }}"/>
+                {{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black;         
+          - type: markdown
+            content: |2-
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'logo') }}"/>
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'title') }}**
+                {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'duration') }} min.)  
+
+                [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                A seguire:
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nexttitle') }}** 
+                {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nextduration') }} min.)
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nextcover') }}"/>
+                {{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black;         
+          - type: markdown
+            content: |2-
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'logo') }}"/>
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'title') }}**
+                {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'duration') }} min.)  
+                
+                [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'description')| replace ('None','' )}} 
+                 
+                ---
+                A seguire:
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nexttitle') }}** 
+                {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nextduration') }} min.)
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nextcover') }}"/>
+                {{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black;         
+          - type: markdown
+            content: |2-
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'logo') }}"/>
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'category') }} 
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'title') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'duration') }} min.)  
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'cover') }}"/>
+                    
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'description')| replace ('None','' )}} 
+                 
+                 ---
+                 A seguire:
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextcategory') }}
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nexttitle') }}** 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextduration') }} min.)
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextcover') }}"/>
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black;    
+          - type: markdown
+            content: |2-
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'logo') }}"/>
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'title') }}**
+                {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'date_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'date_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'duration') }} min.)  
+                
+                [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'cover') }}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'm3u8_link') }})
+                 
+                 {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'description')| replace ('None','' )}} 
+                 
+                ---
+                A seguire:
+                
+                **{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nexttitle') }}** 
+                {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nextdate_start') }} - {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nextdate_end') }} ({{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nextduration') }} min.)
+                <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nextcover') }}"/>
+                {{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'nextdescription')| replace ('None','' )}} 
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px10px 10px 10px;
+                border-width: 1px; border-color: black;   
+      - type: markdown
+        content: >2
+           **Stasera in TV:**
+
+           Ultimo update: {{ state_attr('sensor.stasera_in_tv_rai_1', 'timestamp') }} 
+
+           <img width="50" width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.stasera_in_tv_rai_1', 'icon') }}"/> {{ state_attr('sensor.stasera_in_tv_rai_1', 'title') }} 
+            {{ state_attr('sensor.stasera_in_tv_rai_1', 'start') }} - {{ state_attr('sensor.stasera_in_tv_rai_1', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_rai_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_rai_2', 'icon') }}"/>  {{
+          state_attr('sensor.stasera_in_tv_rai_2', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_rai_2', 'start') }} - {{ state_attr('sensor.stasera_in_tv_rai_2', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_rai_2', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_rai_3', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_rai_3', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_rai_3', 'start') }} - {{ state_attr('sensor.stasera_in_tv_rai_3', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_rai_3', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_rete_4', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_rete_4', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_rete_4', 'start') }} - {{ state_attr('sensor.stasera_in_tv_rete_4', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_rete_4', 'duration') }} min.)
+           
+            ---
+            
+           <img width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.stasera_in_tv_canale_5', 'icon') }}"/> {{ state_attr('sensor.stasera_in_tv_canale_5', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_canale_5', 'start') }} - {{ state_attr('sensor.stasera_in_tv_canale_5', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_canale_5', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_italia_1', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_italia_1', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_italia_1', 'start') }} - {{ state_attr('sensor.stasera_in_tv_italia_1', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_italia_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_la7', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_la7', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_la7', 'start') }} - {{ state_attr('sensor.stasera_in_tv_la7', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_la7', 'duration') }} min.)
+           
+            ---
+            
+           **TV8:** {{ state_attr('sensor.stasera_in_tv_tv8', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_tv8', 'start') }} - {{ state_attr('sensor.stasera_in_tv_tv8', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_tv8', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_nove', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_nove', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_nove', 'start') }} - {{ state_attr('sensor.stasera_in_tv_nove', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_nove', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_iris', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_iris', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_iris', 'start') }} - {{ state_attr('sensor.stasera_in_tv_iris', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_iris', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_mediaset_extra', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_mediaset_extra', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_mediaset_extra', 'start') }} - {{ state_attr('sensor.stasera_in_tv_mediaset_extra', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_mediaset_extra', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_cielo', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_cielo', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_cielo', 'start') }} - {{ state_attr('sensor.stasera_in_tv_cielo', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_cielo', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_20_mediaset', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_20_mediaset', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_20_mediaset', 'start') }} - {{ state_attr('sensor.stasera_in_tv_20_mediaset', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_20_mediaset', 'duration') }} min.)
+           
+            ---
+            
+           **27Mediaset:** {{ state_attr('sensor.stasera_in_tv_27_twentyseven', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_27_twentyseven', 'start') }} - {{ state_attr('sensor.stasera_in_tv_27_twentyseven', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_27_twentyseven', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_dmax', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_dmax', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_dmax', 'start') }} - {{ state_attr('sensor.stasera_in_tv_dmax', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_dmax', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_focus', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_focus', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_focus', 'start') }} - {{ state_attr('sensor.stasera_in_tv_focus', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_focus', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.stasera_in_tv_cine34', 'icon') }}"/> {{
+          state_attr('sensor.stasera_in_tv_cine34', 'title') }} 
+           {{ state_attr('sensor.stasera_in_tv_cine34', 'start') }} - {{ state_attr('sensor.stasera_in_tv_cine34', 'stop') }} ({{ state_attr('sensor.stasera_in_tv_cine34', 'duration') }} min.)
+           
+        card_mod:
+          style: |
+            ha-card { --ha-card-header-font-size: 20px;
+            border-radius: 10px10px 10px 10px;
+            border-width: 1px; border-color: black;    
+      - type: markdown
+        content: >2
+           **Domani in TV:**
+
+           Ultimo update: {{ state_attr('sensor.domani_in_tv_rai_1', 'timestamp') }} 
+
+           <img width="50" width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.domani_in_tv_rai_1', 'icon') }}"/> {{ state_attr('sensor.domani_in_tv_rai_1', 'title') }} 
+            {{ state_attr('sensor.domani_in_tv_rai_1', 'start') }} - {{ state_attr('sensor.domani_in_tv_rai_1', 'stop') }} ({{ state_attr('sensor.domani_in_tv_rai_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_rai_2', 'icon') }}"/>  {{
+          state_attr('sensor.domani_in_tv_rai_2', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_rai_2', 'start') }} - {{ state_attr('sensor.domani_in_tv_rai_2', 'stop') }} ({{ state_attr('sensor.domani_in_tv_rai_2', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_rai_3', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_rai_3', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_rai_3', 'start') }} - {{ state_attr('sensor.domani_in_tv_rai_3', 'stop') }} ({{ state_attr('sensor.domani_in_tv_rai_3', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_rete_4', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_rete_4', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_rete_4', 'start') }} - {{ state_attr('sensor.domani_in_tv_rete_4', 'stop') }} ({{ state_attr('sensor.domani_in_tv_rete_4', 'duration') }} min.)
+           
+            ---
+            
+           <img width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.domani_in_tv_canale_5', 'icon') }}"/> {{ state_attr('sensor.domani_in_tv_canale_5', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_canale_5', 'start') }} - {{ state_attr('sensor.domani_in_tv_canale_5', 'stop') }} ({{ state_attr('sensor.domani_in_tv_canale_5', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_italia_1', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_italia_1', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_italia_1', 'start') }} - {{ state_attr('sensor.domani_in_tv_italia_1', 'stop') }} ({{ state_attr('sensor.domani_in_tv_italia_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_la7', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_la7', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_la7', 'start') }} - {{ state_attr('sensor.domani_in_tv_la7', 'stop') }} ({{ state_attr('sensor.domani_in_tv_la7', 'duration') }} min.)
+           
+            ---
+            
+           **TV8:** {{ state_attr('sensor.domani_in_tv_tv8', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_tv8', 'start') }} - {{ state_attr('sensor.domani_in_tv_tv8', 'stop') }} ({{ state_attr('sensor.domani_in_tv_tv8', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_nove', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_nove', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_nove', 'start') }} - {{ state_attr('sensor.domani_in_tv_nove', 'stop') }} ({{ state_attr('sensor.domani_in_tv_nove', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_iris', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_iris', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_iris', 'start') }} - {{ state_attr('sensor.domani_in_tv_iris', 'stop') }} ({{ state_attr('sensor.domani_in_tv_iris', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_mediaset_extra', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_mediaset_extra', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_mediaset_extra', 'start') }} - {{ state_attr('sensor.domani_in_tv_mediaset_extra', 'stop') }} ({{ state_attr('sensor.domani_in_tv_mediaset_extra', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_cielo', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_cielo', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_cielo', 'start') }} - {{ state_attr('sensor.domani_in_tv_cielo', 'stop') }} ({{ state_attr('sensor.domani_in_tv_cielo', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_20_mediaset', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_20_mediaset', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_20_mediaset', 'start') }} - {{ state_attr('sensor.domani_in_tv_20_mediaset', 'stop') }} ({{ state_attr('sensor.domani_in_tv_20_mediaset', 'duration') }} min.)
+           
+            ---
+            
+           **27Mediaset:** {{ state_attr('sensor.domani_in_tv_27_twentyseven', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_27_twentyseven', 'start') }} - {{ state_attr('sensor.domani_in_tv_27_twentyseven', 'stop') }} ({{ state_attr('sensor.domani_in_tv_27_twentyseven', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_dmax', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_dmax', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_dmax', 'start') }} - {{ state_attr('sensor.domani_in_tv_dmax', 'stop') }} ({{ state_attr('sensor.domani_in_tv_dmax', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_focus', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_focus', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_focus', 'start') }} - {{ state_attr('sensor.domani_in_tv_focus', 'stop') }} ({{ state_attr('sensor.domani_in_tv_focus', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.domani_in_tv_cine34', 'icon') }}"/> {{
+          state_attr('sensor.domani_in_tv_cine34', 'title') }} 
+           {{ state_attr('sensor.domani_in_tv_cine34', 'start') }} - {{ state_attr('sensor.domani_in_tv_cine34', 'stop') }} ({{ state_attr('sensor.domani_in_tv_cine34', 'duration') }} min.)
+           
+        card_mod:
+          style: |
+            ha-card { --ha-card-header-font-size: 20px;
+            border-radius: 10px10px 10px 10px;
+            border-width: 1px; border-color: black;  
+      - type: markdown
+        content: >2
+           **Ora in TV:**
+
+           Ultimo update: {{ state_attr('sensor.ora_in_tv_rai_1', 'timestamp') }} 
+
+           <img width="50" width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.ora_in_tv_rai_1', 'icon') }}"/> {{ state_attr('sensor.ora_in_tv_rai_1', 'title') }} 
+            {{ state_attr('sensor.ora_in_tv_rai_1', 'start') }} - {{ state_attr('sensor.ora_in_tv_rai_1', 'stop') }} ({{ state_attr('sensor.ora_in_tv_rai_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_rai_2', 'icon') }}"/>  {{
+          state_attr('sensor.ora_in_tv_rai_2', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_rai_2', 'start') }} - {{ state_attr('sensor.ora_in_tv_rai_2', 'stop') }} ({{ state_attr('sensor.ora_in_tv_rai_2', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_rai_3', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_rai_3', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_rai_3', 'start') }} - {{ state_attr('sensor.ora_in_tv_rai_3', 'stop') }} ({{ state_attr('sensor.ora_in_tv_rai_3', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_rete_4', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_rete_4', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_rete_4', 'start') }} - {{ state_attr('sensor.ora_in_tv_rete_4', 'stop') }} ({{ state_attr('sensor.ora_in_tv_rete_4', 'duration') }} min.)
+           
+            ---
+            
+           <img width="50" src="https://services.tivulaguida.it/{{ state_attr('sensor.ora_in_tv_canale_5', 'icon') }}"/> {{ state_attr('sensor.ora_in_tv_canale_5', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_canale_5', 'start') }} - {{ state_attr('sensor.ora_in_tv_canale_5', 'stop') }} ({{ state_attr('sensor.ora_in_tv_canale_5', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_italia_1', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_italia_1', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_italia_1', 'start') }} - {{ state_attr('sensor.ora_in_tv_italia_1', 'stop') }} ({{ state_attr('sensor.ora_in_tv_italia_1', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_la7', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_la7', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_la7', 'start') }} - {{ state_attr('sensor.ora_in_tv_la7', 'stop') }} ({{ state_attr('sensor.ora_in_tv_la7', 'duration') }} min.)
+           
+            ---
+            
+           **TV8:** {{ state_attr('sensor.ora_in_tv_tv8', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_tv8', 'start') }} - {{ state_attr('sensor.ora_in_tv_tv8', 'stop') }} ({{ state_attr('sensor.ora_in_tv_tv8', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_nove', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_nove', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_nove', 'start') }} - {{ state_attr('sensor.ora_in_tv_nove', 'stop') }} ({{ state_attr('sensor.ora_in_tv_nove', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_iris', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_iris', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_iris', 'start') }} - {{ state_attr('sensor.ora_in_tv_iris', 'stop') }} ({{ state_attr('sensor.ora_in_tv_iris', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_mediaset_extra', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_mediaset_extra', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_mediaset_extra', 'start') }} - {{ state_attr('sensor.ora_in_tv_mediaset_extra', 'stop') }} ({{ state_attr('sensor.ora_in_tv_mediaset_extra', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_cielo', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_cielo', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_cielo', 'start') }} - {{ state_attr('sensor.ora_in_tv_cielo', 'stop') }} ({{ state_attr('sensor.ora_in_tv_cielo', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_20_mediaset', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_20_mediaset', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_20_mediaset', 'start') }} - {{ state_attr('sensor.ora_in_tv_20_mediaset', 'stop') }} ({{ state_attr('sensor.ora_in_tv_20_mediaset', 'duration') }} min.)
+           
+            ---
+            
+           **27Mediaset:** {{ state_attr('sensor.ora_in_tv_27_twentyseven', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_27_twentyseven', 'start') }} - {{ state_attr('sensor.ora_in_tv_27_twentyseven', 'stop') }} ({{ state_attr('sensor.ora_in_tv_27_twentyseven', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_dmax', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_dmax', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_dmax', 'start') }} - {{ state_attr('sensor.ora_in_tv_dmax', 'stop') }} ({{ state_attr('sensor.ora_in_tv_dmax', 'duration') }} min.)
+           
+            ---
+            
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_focus', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_focus', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_focus', 'start') }} - {{ state_attr('sensor.ora_in_tv_focus', 'stop') }} ({{ state_attr('sensor.ora_in_tv_focus', 'duration') }} min.)
+           
+            ---
+             
+          <img width="50" src="https://services.tivulaguida.it/{{
+          state_attr('sensor.ora_in_tv_cine34', 'icon') }}"/> {{
+          state_attr('sensor.ora_in_tv_cine34', 'title') }} 
+           {{ state_attr('sensor.ora_in_tv_cine34', 'start') }} - {{ state_attr('sensor.ora_in_tv_cine34', 'stop') }} ({{ state_attr('sensor.ora_in_tv_cine34', 'duration') }} min.)
+           
+        card_mod:
+          style: |
+            ha-card { --ha-card-header-font-size: 20px;
+            border-radius: 10px10px 10px 10px;
+            border-width: 1px; border-color: black;  
