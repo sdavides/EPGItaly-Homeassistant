@@ -1,0 +1,22 @@
+alias: Alert stasera in tv Italia1
+description: Alert stasera in tv Italia1
+trigger:
+  - platform: time
+    at: "21:05:00"
+condition: []
+action:
+  - device_id: XXXXXXXXXXXXXXXXXXXXXXXX
+    domain: mobile_app
+    type: notify
+    message: >-
+      {{state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextdate_start') }}:
+      {{state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nexttitle') }}
+    title: Stasera su Italia1
+    data:
+      ttl: 0
+      priority: high
+      image: "{{state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextcover') }}"
+      actions:
+        - action: CLOSE
+          title: Segna come letto
+mode: single
