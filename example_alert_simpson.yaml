@@ -1,0 +1,24 @@
+alias: Alert I Simpson
+description: Alert I Simpson
+trigger:
+  - platform: template
+    value_template: >-
+      {{ 'Simpson' in state_attr('sensor.ora_e_dopo_in_tv_italia1','nexttitle')
+      }}
+condition: []
+action:
+  - device_id: XXXXXXXXXXXXXXXXXXX
+    domain: mobile_app
+    type: notify
+    message: >-
+      tra poco su Italia1 {{state_attr('sensor.ora_e_dopo_in_tv_italia1',
+      'nextdate_start') }}
+    title: I Simpson
+    data:
+      ttl: 0
+      priority: high
+      image: "{{state_attr('sensor.ora_e_dopo_in_tv_italia1', 'nextcover') }}"
+      actions:
+        - action: CLOSE
+          title: Segna come letto
+mode: single
