@@ -13,8 +13,8 @@ action:
     message: >-
       tra poco su Italia2 {{state_attr('sensor.ora_e_dopo_in_tv_italia_2',
       'nextdate_start') }}: {{state_attr('sensor.ora_e_dopo_in_tv_italia_2',
-      'description') }}
-    title: "{{state_attr('sensor.ora_e_dopo_in_tv_italia_2','title') }}"
+      'nextdescription') }}
+    title: "{{state_attr('sensor.ora_e_dopo_in_tv_italia_2','nexttitle') }}"
     data:
       ttl: 0
       priority: high
