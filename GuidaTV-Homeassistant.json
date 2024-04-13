@@ -1655,7 +1655,7 @@
         "type": "function",
         "z": "e1b9874bd249ead0",
         "name": "function json tvit",
-        "func": "msg.url = \"https://tvit.leicaflorianrobert.dev/iptv/list.json\"\n\nvar lastchecked = msg.timestamp\nvar date2 = new Date(lastchecked).toLocaleDateString(\"it-IT\")\nvar time2 = new Date(lastchecked).toLocaleTimeString(\"it-IT\")\nvar finaldate = time2 + \" \" + date2\nmsg.timestamp = finaldate\n\nreturn msg;",
+        "func": "msg.url = \"https://tvit.leicaflorianrobert.dev/iptv/list.json\"\n\nvar lastchecked = msg.timestamp\nvar date = new Date(lastchecked).toLocaleDateString(\"it-IT\")\nvar time = new Date(lastchecked).toLocaleTimeString(\"it-IT\")\nvar today = new Date().toLocaleDateString(\"it-IT\")\nvar finaldate = (time + \" \" + date).replace(today , 'oggi' )\nmsg.timestamp = finaldate\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
