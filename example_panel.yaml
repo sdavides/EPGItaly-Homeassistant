@@ -6,7 +6,7 @@
                  <center>Ultimo Aggiornamento:
                  {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') }}</center>
                  
-                 **Ora in TV**  
+                 **<center>Ora in TV</center>**  
 
                ---
                  
