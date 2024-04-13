@@ -29,7 +29,7 @@ Goal: EPG TV Italy on HomeAssistant
   * example_automation_every_00_01.yaml
 * Send notification of my favorite show
   * example_alert_simpson.yaml
-
+  * example_alert_city_hunter.yaml
 ## Example ##
 ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/19636c5c-e9e5-4d8f-ae6e-ebe6afa80618)
 
