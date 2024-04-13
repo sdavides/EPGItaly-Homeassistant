@@ -7,7 +7,7 @@ trigger:
       state_attr('sensor.ora_e_dopo_in_tv_italia_2','nexttitle') }}
 condition: []
 action:
-  - device_id: 7ff1578f9a83a84b77209c8732d42383
+  - device_id: XXXXXXXXXXXXXXXX
     domain: mobile_app
     type: notify
     message: >-
