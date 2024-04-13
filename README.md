@@ -28,7 +28,9 @@ Goal: EPG TV Italy on HomeAssistant
 * Send notification of my favorite show ( example_alert_simpson.yaml )
 
 ## Example ##
- 
+![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/19636c5c-e9e5-4d8f-ae6e-ebe6afa80618)
+
+
  ## Alert ##
 
 ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/8eb2a6fe-abc3-40db-a90c-c8ecba3bb7f8)
