@@ -35,7 +35,6 @@ Goal: EPG TV Italy on HomeAssistant
 
 
  ## Alert ##
-
-![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/8eb2a6fe-abc3-40db-a90c-c8ecba3bb7f8)
+![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/14c53f7e-a64c-4e51-acfd-e1841baae978)
 
 
