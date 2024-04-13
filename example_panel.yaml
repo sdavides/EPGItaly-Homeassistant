@@ -29,7 +29,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; }
           - type: markdown
             content: |2
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'logo') }}"/>
@@ -54,7 +54,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'logo') }}"/>
@@ -79,7 +79,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rete_4', 'logo') }}"/>
@@ -104,7 +104,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_canale_5', 'logo') }}"/>
@@ -129,7 +129,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia1', 'logo') }}"/>
@@ -154,7 +154,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_la7', 'logo') }}"/>
@@ -179,7 +179,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'logo') }}"/>
@@ -204,7 +204,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'logo') }}"/>
@@ -229,7 +229,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_20', 'logo') }}"/>
@@ -254,7 +254,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'logo') }}"/>
@@ -279,7 +279,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_twenty_seven', 'logo') }}"/>
@@ -304,7 +304,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_cine34', 'logo') }}"/>
@@ -329,7 +329,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black; 
+                border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_focus', 'logo') }}"/>
@@ -354,7 +354,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black;         
+                border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_top_crime', 'logo') }}"/>
@@ -379,7 +379,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black;         
+                border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_italia_2', 'logo') }}"/>
@@ -404,7 +404,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black;         
+                border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'logo') }}"/>
@@ -427,7 +427,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black;    
+                border-width: 1px; border-color: black; }    
           - type: markdown
             content: |2-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra', 'logo') }}"/>
@@ -452,7 +452,7 @@
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
                 border-radius: 10px10px 10px 10px;
-                border-width: 1px; border-color: black;   
+                border-width: 1px; border-color: black; }   
       - type: markdown
         content: >2
            **<center>Stasera in TV</center>**<center>Ultimo update: {{ state_attr('sensor.stasera_in_tv_rai_1', 'timestamp') }} </center>
@@ -572,7 +572,7 @@
           style: |
             ha-card { --ha-card-header-font-size: 20px;
             border-radius: 10px10px 10px 10px;
-            border-width: 1px; border-color: black;    
+            border-width: 1px; border-color: black;  }  
       - type: markdown
         content: >2
            **<center>Domani in TV</center>**<center>Ultimo update: {{ state_attr('sensor.domani_in_tv_rai_1', 'timestamp') }} </center>
@@ -692,4 +692,4 @@
           style: |
             ha-card { --ha-card-header-font-size: 20px;
             border-radius: 10px10px 10px 10px;
-            border-width: 1px; border-color: black;  
+            border-width: 1px; border-color: black;  }
