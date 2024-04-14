@@ -1,0 +1,54 @@
+alias: Alert F1
+description: Alert F1
+trigger:
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_rai_1','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_rai_2','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_rai_3','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_rete_4','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_canale_5','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_la7','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_tv8','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_nove','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_cielo','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_cine34','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_dmax','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_focus','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_italia_2','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_mediaset_20','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_top_crime','nexttitle') }}"
+  - platform: template
+    value_template: "{{ 'F1' in state_attr('sensor.ora_e_dopo_in_tv_twenty_seven','nexttitle') }}"
+condition: []
+action:
+  - device_id: 7ff1578f9a83a84b77209c8732d42383
+    domain: mobile_app
+    type: notify
+    message: >-
+      tra poco su {{ trigger.to_state.name | replace ('Ora e dopo in TV','')}} |
+      {{ trigger.to_state.attributes.nextdate_start }} - {{ trigger.to_state.attributes.nextdate_end }}
+    title: "{{ trigger.to_state.attributes.nexttitle }}"
+    data:
+      ttl: 0
+      priority: high
+      image: "{{ trigger.to_state.attributes.nextcover }}"
+      actions:
+        - action: CLOSE
+          title: Segna come letto
+mode: single
