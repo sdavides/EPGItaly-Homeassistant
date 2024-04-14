@@ -42,7 +42,7 @@ action:
     type: notify
     message: >-
       tra poco su {{ trigger.to_state.name | replace ('Ora e dopo in TV','')}} |
-      {{ trigger.to_state.attributes.nextdate_start }} - {{ trigger.to_state.attributes.nextdate_end }}
+      {{ trigger.to_state.attributes.nextdate_start }} - {{ trigger.to_state.attributes.nextdate_end }} - {{ trigger.to_state.attributes.nextdescription }}
     title: "{{ trigger.to_state.attributes.nexttitle }}"
     data:
       ttl: 0
