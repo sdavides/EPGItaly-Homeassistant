@@ -19,8 +19,7 @@ Goal: EPG TV Italy on HomeAssistant
 
 ## Example panel: ##
 
-![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/5d84c138-3333-4e47-be65-4472a26ac0c6)
-![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/bc8d658b-6790-4d56-ae88-c08d8a3cc710)
+![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/d3d2ab66-5160-4bd7-98f7-b7a9ec3d5475)
 
 
 
