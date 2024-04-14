@@ -1,5 +1,3 @@
-    title: TV
-    path: ora-in-tv
     cards:
       - type: vertical-stack
         cards:
@@ -37,7 +35,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }
           - type: markdown
             content: |2
@@ -69,7 +67,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -101,7 +99,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -132,7 +130,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -163,7 +161,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -194,7 +192,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -225,7 +223,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -256,7 +254,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -288,7 +286,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -319,7 +317,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -351,7 +349,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -382,7 +380,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -413,7 +411,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
@@ -444,7 +442,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2
@@ -475,7 +473,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2
@@ -506,7 +504,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }         
           - type: markdown
             content: |2
@@ -538,7 +536,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }    
           - type: markdown
             content: |2
@@ -569,7 +567,7 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }   
       - type: markdown
         content: >2
@@ -689,7 +687,7 @@
         card_mod:
           style: |
             ha-card { --ha-card-header-font-size: 20px;
-            border-radius: 10px10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
             border-width: 1px; border-color: black;  }  
       - type: markdown
         content: >2
@@ -809,7 +807,7 @@
         card_mod:
           style: |
             ha-card { --ha-card-header-font-size: 20px;
-            border-radius: 10px10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
             border-width: 1px; border-color: black;  }
       - type: vertical-stack
         cards:
@@ -839,5 +837,5 @@
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
-                border-radius: 10px10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
                 border-width: 1px; border-color: black; }
