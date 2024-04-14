@@ -25,12 +25,15 @@ Goal: EPG TV Italy on HomeAssistant
 ## TIPS ##
 
 * Live streaming on Android ( mediaset and others available 13/04/2024 )
-* Update data: add two automation
+* Update data: ( add two automation )
   * example_automation_every_4min.yaml
   * example_automation_every_00_01.yaml
-* Send notification of my favorite show
+* Send notification next scheduler of my favorite show:
   * example_alert_simpson.yaml
   * example_alert_city_hunter.yaml
+  * example_alert_f1_allchannels.yaml (search F1 on all channels on nexttitle)
+  * example_alert_pozzetto_allchannels_descr.yaml (search Pozzetto on all channels on nextdescription)
+    
 * Create dashboard page ( example_panel.yaml, need card_mod )
   
 ## Example ##
