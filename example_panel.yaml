@@ -289,6 +289,33 @@
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'logo') }}"/>
+                 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'category') | replace ('n.d.','' )}} </font>
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'title') | replace ('n.d.','' )}}** 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'duration') | replace ('n.d.','' )}} min.)  </font>
+                 <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_iris', 'date_start_tz') |replace ('n.d.','2024-04-12T00:00:00.000000Z') | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace('-','')}} min.</font>
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'cover') | replace ('n.d.','' )}}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'm3u8_link') }})
+                 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
+                 
+                 ---
+                 A seguire:
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextcategory') | replace ('n.d.','' )}}</font>
+                 **{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nexttitle') | replace ('n.d.','' )| replace ('n.d.','' )}}** 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextdate_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextdate_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextduration') | replace ('n.d.','' )}} min.)</font>
+                 <font size="2">Inizio tra {{ ((state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextdate_start_tz') |replace ('n.d.','2024-04-12T00:00:00.000000Z') | as_datetime - now()).total_seconds() // 60 )|replace('.0','')}} min.</font>
+                 
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextcover') | replace ('n.d.','' )}}"/>
+                 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_iris', 'nextdescription')| replace ('None','' )| replace ('n.d.','' )}} </font>
+            card_mod:
+              style: |
+                ha-card { --ha-card-header-font-size: 20px;
+                border-radius: 10px 10px 10px 10px;
+                border-width: 1px; border-color: black; }
+          - type: markdown
+            content: |2
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'logo') }}"/>
                  
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'category') | replace ('n.d.','' )}} </font>
