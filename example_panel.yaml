@@ -5,7 +5,7 @@
         cards:
           - type: markdown
             content: |2
-                 **<center>Ora in TV</center>**<center>Ultimo update: {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') }}</center>
+                 **<center>Ora in TV</center>**<center>Ultimo update: {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') |replace ('oggi','') }}</center>
                  
                  ---
 
@@ -67,10 +67,6 @@
                 border-width: 1px; border-color: black; } 
           - type: markdown
             content: |2
-                 **<center>Ora in TV</center>**<center>Ultimo update: {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'timestamp') |replace ('oggi','') }}</center>
-                 
-                 ---
-
                  <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'logo') }}"/>
                  
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'category') | replace ('n.d.','' )}} </font>
