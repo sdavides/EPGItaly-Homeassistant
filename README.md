@@ -4,6 +4,7 @@ Goal: EPG TV Italy on HomeAssistant
   * note: 
 	* this flow depend on (https://tvit.leicaflorianrobert.dev/)
 	   * https://tvit.leicaflorianrobert.dev/iptv/list.json
+             now and next live data
       
 ## Requirement ##
 * NodeRed on HomeAssistant
