@@ -1632,7 +1632,7 @@
         "headers": [],
         "x": 410,
         "y": 300,
-        "wires": [["8d633cc0f12669bf", "ad56e879239fac80", "accf21ef54fbc6d8"]]
+        "wires": [["ad56e879239fac80", "accf21ef54fbc6d8"]]
     },
     {
         "id": "82efc8cfca725c24",
@@ -2098,7 +2098,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1750,
-        "y": 660,
+        "y": 720,
         "wires": [[]]
     },
     {
@@ -2136,7 +2136,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1770,
-        "y": 720,
+        "y": 780,
         "wires": [[]]
     },
     {
@@ -2174,7 +2174,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1750,
-        "y": 780,
+        "y": 840,
         "wires": [[]]
     },
     {
@@ -2364,7 +2364,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1780,
-        "y": 840,
+        "y": 900,
         "wires": [[]]
     },
     {
@@ -2399,7 +2399,9 @@
                 "b03d52a5d07f9ac4",
                 "9c3558296d779355",
                 "41ef11dbf14ddc8c",
-                "8250c6a672f361f5"
+                "8250c6a672f361f5",
+                "38b57385bc4fec59",
+                "165645a8263f8bdd"
             ]
         ]
     },
@@ -2587,21 +2589,58 @@
         "wires": [[]]
     },
     {
-        "id": "8d633cc0f12669bf",
-        "type": "change",
+        "id": "38b57385bc4fec59",
+        "type": "debug",
         "z": "e1b9874bd249ead0",
-        "name": "",
-        "rules": [
-            { "t": "delete", "p": "payload[59].next_on_air", "pt": "msg" },
-            { "t": "delete", "p": "payload[59].now_on_air", "pt": "msg" }
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "final",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "165645a8263f8bdd",
+        "type": "ha-sensor",
+        "z": "e1b9874bd249ead0",
+        "name": "Ora e dopo in TV Iris",
+        "entityConfig": "ce18c55c8d3a9fea",
+        "version": 0,
+        "state": "final[\"Iris\"].title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "final[\"Iris\"].title", "valueType": "msg" },
+            { "property": "logo", "value": "final[\"Iris\"].logo", "valueType": "msg" },
+            { "property": "description", "value": "final[\"Iris\"].description", "valueType": "msg" },
+            { "property": "date_start", "value": "final[\"Iris\"].date_start", "valueType": "msg" },
+            { "property": "date_end", "value": "final[\"Iris\"].date_end", "valueType": "msg" },
+            { "property": "duration", "value": "final[\"Iris\"].duration", "valueType": "msg" },
+            { "property": "category", "value": "final[\"Iris\"].category", "valueType": "msg" },
+            { "property": "chnumber", "value": "final[\"Iris\"].chnumber", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "final[\"Iris\"].m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "final[\"Iris\"].cover", "valueType": "msg" },
+            { "property": "nexttitle", "value": "final[\"Iris\"].nexttitle", "valueType": "msg" },
+            { "property": "nextdescription", "value": "final[\"Iris\"].nextdescription", "valueType": "msg" },
+            { "property": "nextdate_start", "value": "final[\"Iris\"].nextdate_start", "valueType": "msg" },
+            { "property": "nextcategory", "value": "final[\"Iris\"].nextcategory", "valueType": "msg" },
+            { "property": "nextduration", "value": "final[\"Iris\"].nextduration", "valueType": "msg" },
+            { "property": "nextcover", "value": "final[\"Iris\"].nextcover", "valueType": "msg" },
+            { "property": "nextdate_end", "value": "final[\"Iris\"].nextdate_end", "valueType": "msg" },
+            { "property": "date_start_tz", "value": "final[\"Iris\"].date_start_tz", "valueType": "msg" },
+            { "property": "date_end_tz", "value": "final[\"Iris\"].date_end_tz", "valueType": "msg" },
+            { "property": "nextdate_start_tz", "value": "final[\"Iris\"].nextdate_start_tz", "valueType": "msg" },
+            { "property": "nextdate_end_tz", "value": "final[\"Iris\"].nextdate_end_tz", "valueType": "msg" }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 240,
-        "y": 240,
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1740,
+        "y": 660,
         "wires": [[]]
     },
     {
@@ -4066,6 +4105,26 @@
         "entityType": "sensor",
         "haConfig": [
             { "property": "name", "value": "Ora e dopo in TV Banco dei Pugni" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "ce18c55c8d3a9fea",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Iris",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Iris" },
             { "property": "icon", "value": "" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
