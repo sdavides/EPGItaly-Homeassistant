@@ -832,25 +832,32 @@
       - type: vertical-stack
         cards:
           - type: markdown
-            content: |2
-                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'logo') }}"/>
+            content: |2+
+
+
+                 {% set default = "2024-04-12T00:00:00.000000Z" %}
+                 {% set defaultresult = (( default | as_datetime - now()).total_seconds() // 60 )|replace('.0','') %}
                  
+                 
+                 <img width='70' src="{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'logo') }}"/>
+                
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'duration') | replace ('n.d.','' )}} min.)  </font>
-                 <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'date_start_tz') |replace ('n.d.','2024-04-12T00:00:00.000000Z') | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace('-','')}} min.</font>
+                 <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
+                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming<img src="{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'cover') | replace ('n.d.','' )}}"/>]({{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'm3u8_link') }})
                  
-                 [<ha-icon icon="mdi:play-circle-outline"></ha-icon> Play streaming]({{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'm3u8_link') }})
-                 
-                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'description')| replace ('None','' )| replace ('n.d.','' )| replace ('no info available','' )}} </font>
                  
                  ---
                  A seguire:
-                 
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nexttitle') | replace ('n.d.','' )| replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdate_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdate_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextduration') | replace ('n.d.','' )}} min.)</font>
-                 <font size="2">Inizio tra {{ ((state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdate_start_tz') |replace ('n.d.','2024-04-12T00:00:00.000000Z') | as_datetime - now()).total_seconds() // 60 )|replace('.0','')}} min.</font>
+                 <font size="2">Inizio tra {{ ((state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdate_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')}} min.</font>
                  
-                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdescription')| replace ('None','' )| replace ('n.d.','' )}} </font>
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextcover') | replace ('n.d.','' )}}"/>
+                 
+                 <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_banco_dei_pugni', 'nextdescription')| replace ('None','' )| replace ('n.d.','' )| replace ('no info available','' ) }} </font>
+
             card_mod:
               style: |
                 ha-card { --ha-card-header-font-size: 20px;
