@@ -5,7 +5,7 @@
         cards:
           - type: markdown
             content: |2
-                 **<center>Ora in TV</center>**<center>Ultimo update: {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') |replace ('oggi','') }}</center>
+                 **<center>Ora in TV</center>**<center>Ultimo update: {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'timestamp') }}</center>
                  
                  ---
 
