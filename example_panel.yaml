@@ -19,7 +19,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_1', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
@@ -49,6 +50,7 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'cover') | replace ('n.d.','' )}}"/>
                     
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_2', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
@@ -79,7 +81,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_rai_3', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
@@ -233,7 +236,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_TV8', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_TV8', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
@@ -263,7 +267,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_NOVE', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
@@ -355,7 +360,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_Cielo', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
@@ -540,7 +546,8 @@
                  **{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'title') | replace ('n.d.','' )}}** 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'date_start') | replace ('n.d.','' )}} - {{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'date_end') | replace ('n.d.','' )}} ({{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'duration') | replace ('n.d.','' )}} min.)  </font>
                  <font size="2">Iniziato da {{ ((state_attr('sensor.ora_e_dopo_in_tv_dmax', 'date_start_tz') |replace ('n.d.',default) | as_datetime - now()).total_seconds() // 60 )|replace('.0','')|replace(defaultresult,'')|replace('-','')}} min.</font>
-                    
+                 <img src="{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'cover') | replace ('n.d.','' )}}"/>
+                 
                  <font size="2">{{ state_attr('sensor.ora_e_dopo_in_tv_dmax', 'description')| replace ('None','' )| replace ('n.d.','' )}} </font>
                  
                  ---
