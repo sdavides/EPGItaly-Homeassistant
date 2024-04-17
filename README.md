@@ -22,15 +22,16 @@ Goal: EPG TV Italy on HomeAssistant
 
 ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/d3d2ab66-5160-4bd7-98f7-b7a9ec3d5475)
 
-
-
-
-
-
-
 ## TIPS ##
 
-* Live streaming on Android ( mediaset and others available 13/04/2024 )
+* Live streaming ( mediaset and others available 13/04/2024 )
+     *  download "m3u8" folder on /config/www/
+     *  create card
+     
+      type: iframe
+      url: /local/m3u8/italia1.html
+      aspect_ratio: 50%'
+  
 * Update data: ( add two automation )
   * example_automation_every_4min.yaml
   * example_automation_every_00_01.yaml
