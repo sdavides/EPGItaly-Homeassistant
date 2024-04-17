@@ -58,6 +58,6 @@ Goal: EPG TV Italy on HomeAssistant
 
 [AqaraPOST-Homeassistant](https://github.com/sdavides/AqaraPOST-Homeassistant/)
 
-[m3u8-HLS-Homeassistant](https://github.com/sdavides/EPGItaly-Homeassistant/)
+[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant/)
 
      
