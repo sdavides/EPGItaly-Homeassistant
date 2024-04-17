@@ -52,3 +52,11 @@ Goal: EPG TV Italy on HomeAssistant
 ## Mobile ##
 ![immagine](https://github.com/sdavides/EPGItaly-Homeassistant/assets/31100253/8b7a2ae1-d8da-4a69-8e4d-5d1e6fbf11eb)
 
+
+## See also ##
+
+[AqaraPOST-Homeassistant](https://github.com/sdavides/AqaraPOST-Homeassistant/)
+
+[m3u8-HLS-Homeassistant]([https://github.com/sdavides/EPGItaly-Homeassistant/)
+
+     
