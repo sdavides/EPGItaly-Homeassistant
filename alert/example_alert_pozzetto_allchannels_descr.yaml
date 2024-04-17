@@ -1,0 +1,54 @@
+alias: Alert Pozzetto
+description: Alert Pozzetto
+trigger:
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_rai_1','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_rai_2','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_rai_3','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_rete_4','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_canale_5','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_la7','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_tv8','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_nove','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_cielo','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_cine34','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_dmax','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_focus','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_italia_2','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_mediaset_20','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_mediaset_extra','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_top_crime','nextdescription') }}"
+  - platform: template
+    value_template: "{{ 'Pozzetto' in state_attr('sensor.ora_e_dopo_in_tv_twenty_seven','nextdescription') }}"
+condition: []
+action:
+  - device_id: XXXXXXXXXXXXXXXXXXXX
+    domain: mobile_app
+    type: notify
+    message: >-
+      tra poco su {{ trigger.to_state.name | replace ('Ora e dopo in TV','')}} |
+      {{ trigger.to_state.attributes.nextdate_start }} - {{ trigger.to_state.attributes.nextdate_end }} - {{ trigger.to_state.attributes.nextdescription }}
+    title: "{{ trigger.to_state.attributes.nexttitle }}"
+    data:
+      ttl: 0
+      priority: high
+      image: "{{ trigger.to_state.attributes.nextcover }}"
+      actions:
+        - action: CLOSE
+          title: Segna come letto
+mode: single
