@@ -1,5 +1,5 @@
 [
-    { "id": "b63cb24e2631b86b", "type": "tab", "label": "Guida TV", "disabled": false, "info": "", "env": [] },
+    { "id": "b63cb24e2631b86b", "type": "tab", "label": "Guida TV", "disabled": true, "info": "", "env": [] },
     {
         "id": "c2715eed45261c95",
         "type": "http request",
@@ -3391,7 +3391,7 @@
             },
             {
                 "property": "end",
-                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".now_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Rai 1\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".now_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "duration", "value": "\"Rai 1\".now_on_air.duration", "valueType": "msg" },
@@ -3411,7 +3411,7 @@
             { "property": "nextcover", "value": "\"Rai 1\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Rai 1\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Rai 1\".now_on_air.start", "valueType": "msg" },
@@ -3466,7 +3466,7 @@
             { "property": "nextcover", "value": "\"Rai 2\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Rai 2\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Rai 2\".now_on_air.start", "valueType": "msg" },
@@ -3501,7 +3501,7 @@
             },
             {
                 "property": "end",
-                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".now_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Italia 1\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".now_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "duration", "value": "\"Italia 1\".now_on_air.duration", "valueType": "msg" },
@@ -3521,7 +3521,7 @@
             { "property": "nextcover", "value": "\"Italia 1\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Italia 1\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Italia 1\".now_on_air.start", "valueType": "msg" },
@@ -3576,7 +3576,7 @@
             { "property": "nextcover", "value": "\"Rai 3\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Rai 3\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Rai 3\".now_on_air.start", "valueType": "msg" },
@@ -3631,7 +3631,7 @@
             { "property": "nextcover", "value": "\"Rete 4\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Rete 4\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Rete 4\".now_on_air.start", "valueType": "msg" },
@@ -3686,7 +3686,7 @@
             { "property": "nextcover", "value": "\"Canale 5\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Canale 5\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Canale 5\".now_on_air.start", "valueType": "msg" },
@@ -3741,7 +3741,7 @@
             { "property": "nextcover", "value": "\"La7\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"La7\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"La7\".now_on_air.start", "valueType": "msg" },
@@ -3796,7 +3796,7 @@
             { "property": "nextcover", "value": "\"TV8\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"TV8\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"TV8\".now_on_air.start", "valueType": "msg" },
@@ -3851,7 +3851,7 @@
             { "property": "nextcover", "value": "\"Nove\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Nove\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Nove\".now_on_air.start", "valueType": "msg" },
@@ -3906,7 +3906,7 @@
             { "property": "nextcover", "value": "\"Mediaset 20\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Mediaset 20\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Mediaset 20\".now_on_air.start", "valueType": "msg" },
@@ -3961,7 +3961,7 @@
             { "property": "nextcover", "value": "\"Cielo\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Cielo\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Cielo\".now_on_air.start", "valueType": "msg" },
@@ -4016,7 +4016,7 @@
             { "property": "nextcover", "value": "\"Twenty Seven\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Twenty Seven\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Twenty Seven\".now_on_air.start", "valueType": "msg" },
@@ -4071,7 +4071,7 @@
             { "property": "nextcover", "value": "\"Cine 34\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Cine 34\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Cine 34\".now_on_air.start", "valueType": "msg" },
@@ -4126,7 +4126,7 @@
             { "property": "nextcover", "value": "\"Focus\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Focus\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Focus\".now_on_air.start", "valueType": "msg" },
@@ -4181,7 +4181,7 @@
             { "property": "nextcover", "value": "\"Top Crime\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Top Crime\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Top Crime\".now_on_air.start", "valueType": "msg" },
@@ -4236,7 +4236,7 @@
             { "property": "nextcover", "value": "\"Italia 2\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Italia 2\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Italia 2\".now_on_air.start", "valueType": "msg" },
@@ -4291,7 +4291,7 @@
             { "property": "nextcover", "value": "\"DMAX\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"DMAX\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"DMAX\".now_on_air.start", "valueType": "msg" },
@@ -4405,7 +4405,7 @@
             { "property": "nextcover", "value": "\"Iris\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Iris\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Iris\".now_on_air.start", "valueType": "msg" },
@@ -4515,7 +4515,7 @@
             { "property": "nextcover", "value": "\"Real Time\".next_on_air.cover_img", "valueType": "msg" },
             {
                 "property": "next_end",
-                "value": "$split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".next_on_air.end, \" \")[1], \":\")[1]",
+                "value": "$split($split(\"Real Time\".next_on_air.end, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".next_on_air.end, \" \")[1], \":\")[1]",
                 "valueType": "jsonata"
             },
             { "property": "start_tz", "value": "\"Real Time\".now_on_air.start", "valueType": "msg" },
@@ -7143,7 +7143,7 @@
         "enableGlobalContextStore": false
     },
     {
-        "id": "2f1477285fa42667",
+        "id": "5040b5fbf1d44fc5",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3" }
