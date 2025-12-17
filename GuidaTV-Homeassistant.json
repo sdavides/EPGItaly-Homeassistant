@@ -1,5 +1,5 @@
 [
-    { "id": "b63cb24e2631b86b", "type": "tab", "label": "Guida TV", "disabled": true, "info": "", "env": [] },
+    { "id": "b63cb24e2631b86b", "type": "tab", "label": "Guida TV", "disabled": false, "info": "", "env": [] },
     {
         "id": "c2715eed45261c95",
         "type": "http request",
