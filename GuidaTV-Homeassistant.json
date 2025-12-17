@@ -3038,8 +3038,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 530,
-        "y": 3320,
+        "x": 570,
+        "y": 3380,
         "wires": [["db351fdc2d67d359"]]
     },
     {
@@ -3053,8 +3053,8 @@
         "once": true,
         "onceDelay": "5",
         "topic": "",
-        "x": 270,
-        "y": 3360,
+        "x": 310,
+        "y": 3420,
         "wires": [["4c3d7d0cc60aab86"]]
     },
     {
@@ -3069,8 +3069,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 3400,
+        "x": 570,
+        "y": 3460,
         "wires": [["2408291060e71dec"]]
     },
     {
@@ -3085,8 +3085,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 3320,
+        "x": 850,
+        "y": 3380,
         "wires": [
             [
                 "8c868f60fd658002",
@@ -3120,8 +3120,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3160,
+        "x": 1160,
+        "y": 3220,
         "wires": [[]]
     },
     {
@@ -3144,8 +3144,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3200,
+        "x": 1160,
+        "y": 3260,
         "wires": [[]]
     },
     {
@@ -3168,8 +3168,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3240,
+        "x": 1160,
+        "y": 3300,
         "wires": [[]]
     },
     {
@@ -3192,8 +3192,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1130,
-        "y": 3280,
+        "x": 1170,
+        "y": 3340,
         "wires": [[]]
     },
     {
@@ -3216,8 +3216,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3320,
+        "x": 1160,
+        "y": 3380,
         "wires": [[]]
     },
     {
@@ -3240,8 +3240,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3360,
+        "x": 1160,
+        "y": 3420,
         "wires": [[]]
     },
     {
@@ -3264,8 +3264,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1110,
-        "y": 3400,
+        "x": 1150,
+        "y": 3460,
         "wires": [[]]
     },
     {
@@ -3288,8 +3288,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1120,
-        "y": 3440,
+        "x": 1160,
+        "y": 3500,
         "wires": [[]]
     },
     {
@@ -3302,8 +3302,8 @@
         "outputs": 1,
         "entityConfig": "9472ebd093c6c29c",
         "outputProperties": [{ "property": "timestamp", "propertyType": "msg", "value": "", "valueType": "date" }],
-        "x": 280,
-        "y": 3420,
+        "x": 320,
+        "y": 3480,
         "wires": [["4c3d7d0cc60aab86"]]
     },
     {
@@ -3319,6 +3319,1285 @@
         "x": 160,
         "y": 2160,
         "wires": [["6a704b1a26bb5e46"]]
+    },
+    {
+        "id": "03a6d3781dce7db4",
+        "type": "http request",
+        "z": "b63cb24e2631b86b",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 3760,
+        "wires": [["da458ada486a9148"]]
+    },
+    {
+        "id": "11de5257213a68b9",
+        "type": "inject",
+        "z": "b63cb24e2631b86b",
+        "name": "",
+        "props": [{ "p": "timestamp", "v": "", "vt": "date" }],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "10",
+        "topic": "",
+        "x": 330,
+        "y": 3800,
+        "wires": [["e1d0d80612f9bd5b"]]
+    },
+    {
+        "id": "e1d0d80612f9bd5b",
+        "type": "function",
+        "z": "b63cb24e2631b86b",
+        "name": "function json tvit",
+        "func": "msg.url = \"https://tvit.leicaflorianrobert.dev/iptv/list.json\"\n\nvar lastchecked = msg.timestamp\nvar date = new Date(lastchecked).toLocaleDateString(\"it-IT\")\nvar time = new Date(lastchecked).toLocaleTimeString(\"it-IT\").slice(0, -3)\nvar today = new Date().toLocaleDateString(\"it-IT\")\nvar finaldate = (time + \" \" + date).replace(today , 'oggi' )\nmsg.timestamp = finaldate\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 3820,
+        "wires": [["891c456cffce364d"]]
+    },
+    {
+        "id": "55d6476ca2f9f3b8",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Rai 1",
+        "entityConfig": "d3cdef99ed8cda70",
+        "version": 0,
+        "state": "\"Rai 1\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Rai 1\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Rai 1\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Rai 1\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Rai 1\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Rai 1\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Rai 1\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Rai 1\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Rai 1\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Rai 1\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Rai 1\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Rai 1\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Rai 1\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Rai 1\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Rai 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 1\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Rai 1\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Rai 1\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Rai 1\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Rai 1\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 3680,
+        "wires": [[]]
+    },
+    {
+        "id": "43f4e1b6a59b0cf0",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Rai 2",
+        "entityConfig": "6a9a0bb22506411f",
+        "version": 0,
+        "state": "\"Rai 2\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Rai 2\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Rai 2\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Rai 2\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Rai 2\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Rai 2\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Rai 2\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Rai 2\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Rai 2\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Rai 2\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Rai 2\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Rai 2\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Rai 2\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Rai 2\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Rai 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 2\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Rai 2\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Rai 2\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Rai 2\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Rai 2\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 3740,
+        "wires": [[]]
+    },
+    {
+        "id": "303c3c0638eb3c3b",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Italia1",
+        "entityConfig": "bb188ce87060569a",
+        "version": 0,
+        "state": "\"Italia 1\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Italia 1\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Italia 1\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Italia 1\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Italia 1\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Italia 1\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Italia 1\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Italia 1\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Italia 1\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Italia 1\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Italia 1\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Italia 1\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Italia 1\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Italia 1\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Italia 1\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 1\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Italia 1\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Italia 1\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Italia 1\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Italia 1\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1380,
+        "y": 3800,
+        "wires": [[]]
+    },
+    {
+        "id": "e56e9b0297da145d",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Rai 3",
+        "entityConfig": "c7422ea03b026ad6",
+        "version": 0,
+        "state": "\"Rai 3\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Rai 3\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Rai 3\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Rai 3\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Rai 3\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Rai 3\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Rai 3\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Rai 3\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Rai 3\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Rai 3\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Rai 3\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Rai 3\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Rai 3\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Rai 3\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Rai 3\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rai 3\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Rai 3\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Rai 3\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Rai 3\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Rai 3\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 3800,
+        "wires": [[]]
+    },
+    {
+        "id": "c8a70d221127c2ae",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Rete 4",
+        "entityConfig": "2dbd2faaef7f1dcc",
+        "version": 0,
+        "state": "\"Rete 4\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Rete 4\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Rete 4\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Rete 4\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Rete 4\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Rete 4\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Rete 4\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Rete 4\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Rete 4\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Rete 4\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Rete 4\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Rete 4\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Rete 4\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Rete 4\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Rete 4\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Rete 4\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Rete 4\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Rete 4\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Rete 4\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Rete 4\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1380,
+        "y": 3680,
+        "wires": [[]]
+    },
+    {
+        "id": "e6567ab5f2b86f6c",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Canale 5",
+        "entityConfig": "8ff434087ddb8509",
+        "version": 0,
+        "state": "\"Canale 5\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Canale 5\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Canale 5\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Canale 5\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Canale 5\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Canale 5\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Canale 5\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Canale 5\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Canale 5\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Canale 5\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Canale 5\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Canale 5\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Canale 5\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Canale 5\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Canale 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Canale 5\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Canale 5\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Canale 5\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Canale 5\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Canale 5\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1390,
+        "y": 3740,
+        "wires": [[]]
+    },
+    {
+        "id": "b0f12b3a80d32bb5",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV La7",
+        "entityConfig": "8aedcb2b672507bc",
+        "version": 0,
+        "state": "\"La7\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"La7\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"La7\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"La7\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"La7\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"La7\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"La7\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"La7\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"La7\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"La7\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"La7\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"La7\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"La7\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"La7\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"La7\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La7\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"La7\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"La7\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"La7\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"La7\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1370,
+        "y": 3860,
+        "wires": [[]]
+    },
+    {
+        "id": "82d4509c534e5dba",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV TV8",
+        "entityConfig": "d0929d1796c142c1",
+        "version": 0,
+        "state": "\"TV8\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"TV8\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"TV8\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"TV8\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"TV8\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"TV8\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"TV8\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"TV8\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"TV8\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"TV8\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"TV8\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"TV8\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"TV8\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"TV8\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"TV8\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"TV8\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"TV8\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"TV8\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"TV8\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"TV8\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1050,
+        "y": 3920,
+        "wires": [[]]
+    },
+    {
+        "id": "3fc1d290e20da9b4",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Nove",
+        "entityConfig": "0ceec9a3078b554b",
+        "version": 0,
+        "state": "\"Nove\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Nove\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Nove\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Nove\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Nove\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Nove\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Nove\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Nove\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Nove\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Nove\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Nove\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Nove\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Nove\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Nove\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Nove\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Nove\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Nove\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Nove\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Nove\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Nove\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 3860,
+        "wires": [[]]
+    },
+    {
+        "id": "fc62333c0f26a1c4",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Mediaset 20",
+        "entityConfig": "f2697d989717eaae",
+        "version": 0,
+        "state": "\"Mediaset 20\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Mediaset 20\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Mediaset 20\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Mediaset 20\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Mediaset 20\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Mediaset 20\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Mediaset 20\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Mediaset 20\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Mediaset 20\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Mediaset 20\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Mediaset 20\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Mediaset 20\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Mediaset 20\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Mediaset 20\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Mediaset 20\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset 20\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Mediaset 20\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Mediaset 20\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Mediaset 20\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Mediaset 20\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1400,
+        "y": 3920,
+        "wires": [[]]
+    },
+    {
+        "id": "142c5245e2cbb2ef",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Cielo",
+        "entityConfig": "575b452e1af5d7e5",
+        "version": 0,
+        "state": "\"Cielo\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Cielo\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Cielo\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Cielo\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Cielo\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Cielo\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Cielo\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Cielo\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Cielo\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Cielo\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Cielo\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Cielo\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Cielo\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Cielo\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Cielo\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cielo\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Cielo\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Cielo\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Cielo\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Cielo\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1380,
+        "y": 4040,
+        "wires": [[]]
+    },
+    {
+        "id": "03c79760ca96d728",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Twenty Seven",
+        "entityConfig": "c8dd482ef6cb773a",
+        "version": 0,
+        "state": "\"Twenty Seven\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Twenty Seven\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Twenty Seven\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Twenty Seven\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Twenty Seven\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Twenty Seven\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Twenty Seven\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Twenty Seven\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Twenty Seven\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Twenty Seven\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Twenty Seven\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Twenty Seven\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Twenty Seven\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Twenty Seven\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Twenty Seven\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Twenty Seven\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Twenty Seven\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Twenty Seven\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Twenty Seven\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Twenty Seven\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1400,
+        "y": 4100,
+        "wires": [[]]
+    },
+    {
+        "id": "66db11066f12a911",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Cine34",
+        "entityConfig": "6532ffeabb52c26a",
+        "version": 0,
+        "state": "\"Cine 34\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Cine 34\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Cine 34\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Cine 34\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Cine 34\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Cine 34\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Cine 34\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Cine 34\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Cine 34\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Cine 34\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Cine 34\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Cine 34\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Cine 34\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Cine 34\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Cine 34\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Cine 34\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Cine 34\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Cine 34\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Cine 34\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Cine 34\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1380,
+        "y": 4160,
+        "wires": [[]]
+    },
+    {
+        "id": "f5b06b3777eeb410",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Focus",
+        "entityConfig": "2fe5b525c2740385",
+        "version": 0,
+        "state": "\"Focus\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Focus\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Focus\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Focus\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Focus\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Focus\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Focus\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Focus\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Focus\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Focus\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Focus\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Focus\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Focus\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Focus\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Focus\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Focus\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Focus\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Focus\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Focus\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Focus\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 3980,
+        "wires": [[]]
+    },
+    {
+        "id": "20db42213d49dae6",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Top Crime",
+        "entityConfig": "83670cdeaaf2dcbd",
+        "version": 0,
+        "state": "\"Top Crime\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Top Crime\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Top Crime\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Top Crime\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Top Crime\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Top Crime\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Top Crime\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Top Crime\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Top Crime\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Top Crime\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Top Crime\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Top Crime\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Top Crime\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Top Crime\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Top Crime\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Top Crime\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Top Crime\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Top Crime\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Top Crime\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Top Crime\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1070,
+        "y": 4040,
+        "wires": [[]]
+    },
+    {
+        "id": "bf2ba6869ae3d1f1",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Italia 2",
+        "entityConfig": "45325ae54a7b723a",
+        "version": 0,
+        "state": "\"Italia 2\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Italia 2\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Italia 2\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Italia 2\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Italia 2\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Italia 2\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Italia 2\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Italia 2\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Italia 2\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Italia 2\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Italia 2\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Italia 2\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Italia 2\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Italia 2\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Italia 2\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Italia 2\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Italia 2\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Italia 2\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Italia 2\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Italia 2\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 4100,
+        "wires": [[]]
+    },
+    {
+        "id": "a1dbc07b301d195b",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV DMAX",
+        "entityConfig": "d6ac855d69116711",
+        "version": 0,
+        "state": "\"DMAX\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"DMAX\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"DMAX\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"DMAX\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"DMAX\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"DMAX\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"DMAX\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"DMAX\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"DMAX\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"DMAX\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"DMAX\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"DMAX\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"DMAX\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"DMAX\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"DMAX\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"DMAX\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"DMAX\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"DMAX\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"DMAX\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"DMAX\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1060,
+        "y": 4160,
+        "wires": [[]]
+    },
+    {
+        "id": "5c775c6ccc96cf7f",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Mediaset Extra",
+        "entityConfig": "a6c3b7fa32252cc8",
+        "version": 0,
+        "state": "\"Mediaset Extra\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Mediaset Extra\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Mediaset Extra\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Mediaset Extra\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Mediaset Extra\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset Extra\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Mediaset Extra\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset Extra\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Mediaset Extra\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Mediaset Extra\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Mediaset Extra\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Mediaset Extra\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Mediaset Extra\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Mediaset Extra\".next_on_air.title", "valueType": "msg" },
+            {
+                "property": "nextdescription",
+                "value": "\"Mediaset Extra\".next_on_air.description",
+                "valueType": "msg"
+            },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Mediaset Extra\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset Extra\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Mediaset Extra\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Mediaset Extra\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Mediaset Extra\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Mediaset Extra\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Mediaset Extra\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Mediaset Extra\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Mediaset Extra\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Mediaset Extra\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Mediaset Extra\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1410,
+        "y": 4220,
+        "wires": [[]]
+    },
+    {
+        "id": "2a4facbabbd67b8a",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Iris",
+        "entityConfig": "55e91007598dca8a",
+        "version": 0,
+        "state": "\"Iris\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Iris\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Iris\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Iris\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Iris\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Iris\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Iris\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Iris\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Iris\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Iris\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Iris\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Iris\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Iris\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Iris\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Iris\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Iris\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Iris\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Iris\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Iris\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Iris\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1370,
+        "y": 3980,
+        "wires": [[]]
+    },
+    {
+        "id": "2336e6466d86eb2d",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV La5",
+        "entityConfig": "69766f87fbc3de32",
+        "version": 0,
+        "state": "\"La 5\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"La 5\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"La 5\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"La 5\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"La 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La 5\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"La 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La 5\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"La 5\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"La 5\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"La 5\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"La 5\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"La 5\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"La 5\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"La 5\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"La 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La 5\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"La 5\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"La 5\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"La 5\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"La 5\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"La 5\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"La 5\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"La 5\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"La 5\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"La 5\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1050,
+        "y": 4220,
+        "wires": [[]]
+    },
+    {
+        "id": "72197c57f3aa796b",
+        "type": "ha-sensor",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Real Time",
+        "entityConfig": "0cae5c07b483e8c0",
+        "version": 0,
+        "state": "\"Real Time\".now_on_air.title",
+        "stateType": "msg",
+        "attributes": [
+            { "property": "title", "value": "\"Real Time\".now_on_air.title", "valueType": "msg" },
+            { "property": "logo", "value": "\"Real Time\".logo_url_light", "valueType": "msg" },
+            { "property": "description", "value": "\"Real Time\".now_on_air.description", "valueType": "msg" },
+            {
+                "property": "start",
+                "value": "$split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".now_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "end",
+                "value": "$split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".now_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "duration", "value": "\"Real Time\".now_on_air.duration", "valueType": "msg" },
+            { "property": "category", "value": "\"Real Time\".now_on_air.category", "valueType": "msg" },
+            { "property": "chnumber", "value": "\"Real Time\".dtt_num", "valueType": "msg" },
+            { "property": "m3u8_link", "value": "\"Real Time\".m3u8_link", "valueType": "msg" },
+            { "property": "cover", "value": "\"Real Time\".now_on_air.cover_img", "valueType": "msg" },
+            { "property": "nexttitle", "value": "\"Real Time\".next_on_air.title", "valueType": "msg" },
+            { "property": "nextdescription", "value": "\"Real Time\".next_on_air.description", "valueType": "msg" },
+            {
+                "property": "next_start",
+                "value": "$split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "nextcategory", "value": "\"Real Time\".next_on_air.category", "valueType": "msg" },
+            { "property": "nextduration", "value": "\"Real Time\".next_on_air.duration", "valueType": "msg" },
+            { "property": "nextcover", "value": "\"Real Time\".next_on_air.cover_img", "valueType": "msg" },
+            {
+                "property": "next_end",
+                "value": "$split($split(\"Real Time\".next_on_air.start, \" \")[1], \":\")[0] & \":\" & $split($split(\"Real Time\".next_on_air.end, \" \")[1], \":\")[1]",
+                "valueType": "jsonata"
+            },
+            { "property": "start_tz", "value": "\"Real Time\".now_on_air.start", "valueType": "msg" },
+            { "property": "end_tz", "value": "\"Real Time\".now_on_air.end", "valueType": "msg" },
+            { "property": "next_start_tz", "value": "\"Real Time\".next_on_air.start", "valueType": "msg" },
+            { "property": "next_end_tz", "value": "\"Real Time\".next_on_air.end", "valueType": "msg" },
+            { "property": "lastchecked", "value": "timestamp", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1070,
+        "y": 4280,
+        "wires": [[]]
+    },
+    {
+        "id": "bde9ef7087b9cac3",
+        "type": "ha-button",
+        "z": "b63cb24e2631b86b",
+        "name": "Ora e dopo in TV Update",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "9f33a5d503d8dfa3",
+        "outputProperties": [{ "property": "timestamp", "propertyType": "msg", "value": "", "valueType": "date" }],
+        "x": 290,
+        "y": 3860,
+        "wires": [["e1d0d80612f9bd5b"]]
+    },
+    {
+        "id": "891c456cffce364d",
+        "type": "change",
+        "z": "b63cb24e2631b86b",
+        "name": "timeout",
+        "rules": [{ "t": "set", "p": "timeout", "pt": "msg", "to": "7000", "tot": "str" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 3820,
+        "wires": [["03a6d3781dce7db4"]]
+    },
+    {
+        "id": "da458ada486a9148",
+        "type": "function",
+        "z": "b63cb24e2631b86b",
+        "name": "catch array name channel",
+        "func": "const resultLength = msg.payload.length;\n\nfor (let i = 0; i < resultLength; i++) {\n    let attrName = msg.payload[i].name;\n    msg[attrName] = msg.payload[i];\n\n}\n\nnode.send(msg);\n\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 3680,
+        "wires": [
+            [
+                "55d6476ca2f9f3b8",
+                "43f4e1b6a59b0cf0",
+                "e56e9b0297da145d",
+                "c8a70d221127c2ae",
+                "e6567ab5f2b86f6c",
+                "303c3c0638eb3c3b",
+                "b0f12b3a80d32bb5",
+                "3fc1d290e20da9b4",
+                "82d4509c534e5dba",
+                "f5b06b3777eeb410",
+                "20db42213d49dae6",
+                "bf2ba6869ae3d1f1",
+                "a1dbc07b301d195b",
+                "2336e6466d86eb2d",
+                "fc62333c0f26a1c4",
+                "2a4facbabbd67b8a",
+                "142c5245e2cbb2ef",
+                "03c79760ca96d728",
+                "66db11066f12a911",
+                "5c775c6ccc96cf7f",
+                "72197c57f3aa796b"
+            ]
+        ]
     },
     {
         "id": "7b354b528dc79c71",
@@ -5411,6 +6690,444 @@
         "debugEnabled": false
     },
     {
+        "id": "d3cdef99ed8cda70",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Rai 1",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Rai 1" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6a9a0bb22506411f",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Rai 2",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Rai 2" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "bb188ce87060569a",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Italia1",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Italia1" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c7422ea03b026ad6",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Rai 3",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Rai 3" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "2dbd2faaef7f1dcc",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Rete 4",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Rete 4" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8ff434087ddb8509",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Canale 5",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Canale 5" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8aedcb2b672507bc",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV La7",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV La7" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "d0929d1796c142c1",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV TV8",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV TV8" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "0ceec9a3078b554b",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Nove",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Nove" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f2697d989717eaae",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Mediaset 20",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Mediaset 20" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "575b452e1af5d7e5",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Cielo",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Cielo" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c8dd482ef6cb773a",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Twenty Seven",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Twenty Seven" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6532ffeabb52c26a",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Cine34",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Cine34" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "2fe5b525c2740385",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Focus",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Focus" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "83670cdeaaf2dcbd",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Top Crime",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Top Crime" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "45325ae54a7b723a",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Italia 2",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Italia 2" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "d6ac855d69116711",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV DMAX",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV DMAX" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a6c3b7fa32252cc8",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Mediaset Extra",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Mediaset Extra" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "55e91007598dca8a",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Iris",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Iris" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "69766f87fbc3de32",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV La5",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV La5" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "0cae5c07b483e8c0",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Real Time",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Real Time" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9f33a5d503d8dfa3",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Ora e dopo in TV Update",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Ora e dopo in TV Update" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "2b77899a.ed9b86",
         "type": "server",
         "name": "homeassistant",
@@ -5426,7 +7143,7 @@
         "enableGlobalContextStore": false
     },
     {
-        "id": "25319c6740537c3d",
+        "id": "2f1477285fa42667",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3" }
